@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="c:\SensoryOverload\unity\Assets\Scripts\StoryNodes\ChoiceNode.cs">
+    <Files>
+      <File FileName="Assets\Scripts\StoryManager.cs" Line="26" Column="30" />
+      <File FileName="c:\SensoryOverload\unity\Assets\Scripts\StoryNodes\ChoiceNode.cs" Line="28" Column="29" />
+      <File FileName="c:\SensoryOverload\unity\Assets\Scripts\StoryNodes\DialogueNode.cs" Line="12" Column="60" />
+      <File FileName="Assets\Scripts\StoryNodes\ChoiceOptionNode.cs" Line="9" Column="21" />
+      <File FileName="Assets\Scripts\UserInterface\UIDialouePanel.cs" Line="8" Column="2" />
+      <File FileName="Assets\Scripts\UserInterface\UIChoicePanel.cs" Line="8" Column="27" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
