@@ -13,7 +13,7 @@ public class InterstitialNode : StoryNode {
 		UIManager.Instance.InterstitialUI.DisplayImage.sprite = Image;
 		
 		UIManager.Instance.InterstitialUI.gameObject.SetActive(true);
-		
+		UIManager.Instance.InterstitialUI.NextButton.onClick.RemoveAllListeners ();
 		UIManager.Instance.InterstitialUI.NextButton.onClick.AddListener (OnClick);
 	}
 	
