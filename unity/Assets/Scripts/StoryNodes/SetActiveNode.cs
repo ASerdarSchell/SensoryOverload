@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SetActiveNode : MonoBehaviour {
+public class SetActiveNode : StoryNode {
+	
+	public GameObject SetGameObject;
+	public bool NewState = false;
+	
+	public StoryNode NextNode = null;
+	
+	override public void Display()
+	{
+		SetGameObject.SetActive (NewState);
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		StoryManager.Instance.ShowNode (NextNode);
 	}
 }

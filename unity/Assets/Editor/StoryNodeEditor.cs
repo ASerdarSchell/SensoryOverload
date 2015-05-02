@@ -4,8 +4,8 @@ using UnityEditor;
 
 public class StoryNodeHelper
 {
-	static string[] options = new string[] { "Create Node", "AudioNode", "CameraNode", "ChoiceNode", "DialogueNode", "PreviousChoiceNode" };
-	static System.Type[] optionType = new System.Type[] { typeof(string), typeof(AudioNode), typeof(CameraNode), typeof(ChoiceNode), typeof(DialogueNode), typeof(PreviousChoiceNode) };
+	static string[] options = new string[] { "Create Node", "AudioNode", "CameraNode", "ChoiceNode", "DialogueNode", "PreviousChoiceNode", "InterstitialNode", "SetActiveNode" };
+	static System.Type[] optionType = new System.Type[] { typeof(string), typeof(AudioNode), typeof(CameraNode), typeof(ChoiceNode), typeof(DialogueNode), typeof(PreviousChoiceNode), typeof(InterstitialNode), typeof(SetActiveNode) };
 
 	public static StoryNode DrawCreateHelper(GameObject parent)
 	{
@@ -78,6 +78,34 @@ public class ChoiceOptionNodeEditor : Editor {
 		StoryNode nextNode = StoryNodeHelper.DrawCreateHelper (((MonoBehaviour)target).gameObject);
 		if (nextNode != null) {
 			((ChoiceOptionNode)target).NextNode = nextNode;
+		}
+	}
+}
+
+[CustomEditor(typeof(InterstitialNode))]
+public class InterstitialNodeEditor : Editor {
+	
+	public override void OnInspectorGUI()
+	{
+		DrawDefaultInspector ();
+		
+		StoryNode nextNode = StoryNodeHelper.DrawCreateHelper (((MonoBehaviour)target).gameObject);
+		if (nextNode != null) {
+			((InterstitialNode)target).NextNode = nextNode;
+		}
+	}
+}
+
+[CustomEditor(typeof(SetActiveNode))]
+public class SetActiveNodeEditor : Editor {
+	
+	public override void OnInspectorGUI()
+	{
+		DrawDefaultInspector ();
+		
+		StoryNode nextNode = StoryNodeHelper.DrawCreateHelper (((MonoBehaviour)target).gameObject);
+		if (nextNode != null) {
+			((SetActiveNode)target).NextNode = nextNode;
 		}
 	}
 }
