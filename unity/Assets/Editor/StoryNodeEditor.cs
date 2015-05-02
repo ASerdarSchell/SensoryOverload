@@ -24,6 +24,17 @@ public class StoryNodeHelper
 
 		return null;
 	}
+
+	public static void DrawTextBox(SerializedObject sobj, string propName)
+	{
+		sobj.Update ();
+		SerializedProperty propery = sobj.FindProperty (propName);
+		GUILayout.Label (propName);
+		EditorStyles.textField.wordWrap = true;
+		propery.stringValue = EditorGUILayout.TextArea( propery.stringValue );
+		sobj.ApplyModifiedProperties ();
+
+	}
 }
 
 [CustomEditor(typeof(DialogueNode))]
@@ -86,6 +97,8 @@ public class ChoiceOptionNodeEditor : Editor {
 	public override void OnInspectorGUI()
 	{
 		DrawDefaultInspector ();
+
+		StoryNodeHelper.DrawTextBox(serializedObject, "ChoiceText");
 		
 		StoryNode nextNode = StoryNodeHelper.DrawCreateHelper (((MonoBehaviour)target).gameObject);
 		if (nextNode != null) {
@@ -100,6 +113,8 @@ public class InterstitialNodeEditor : Editor {
 	public override void OnInspectorGUI()
 	{
 		DrawDefaultInspector ();
+
+		StoryNodeHelper.DrawTextBox(serializedObject, "DialogueText");
 		
 		StoryNode nextNode = StoryNodeHelper.DrawCreateHelper (((MonoBehaviour)target).gameObject);
 		if (nextNode != null) {
@@ -128,7 +143,9 @@ public class ChoiceNodeEditor : Editor {
 	public override void OnInspectorGUI()
 	{
 		DrawDefaultInspector ();
-		
+
+		StoryNodeHelper.DrawTextBox(serializedObject, "DialogueText");
+
 		if (GUILayout.Button ("Add Choice Option")) {
 			((ChoiceNode)target).gameObject.AddComponent<ChoiceOptionNode>();
 		}
