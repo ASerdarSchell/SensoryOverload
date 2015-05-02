@@ -4,10 +4,19 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class FindEndNodesWindow : EditorWindow {
+
+
+	static EditorWindow instance = null;
+
 	[MenuItem ("Sensory Overload/Find End Nodes")]
-	
-	public static void  ShowWindow () {
-		EditorWindow.GetWindow(typeof(FindEndNodesWindow));
+	public static void  ToggleWindow () {
+		if (instance == null)
+			instance = EditorWindow.GetWindow(typeof(FindEndNodesWindow));
+		else 
+		{
+			instance.Close();
+			instance = null;
+		}
 	}
 
 	List<StoryNode> EmptyNextNodes = null;
@@ -69,6 +78,8 @@ public class FindEndNodesWindow : EditorWindow {
 		scroll = GUILayout.BeginScrollView (scroll);
 
 		foreach (StoryNode currentNode in EmptyNextNodes) {
+			if (currentNode == null)
+				continue;
 			string name = currentNode.name;
 			if (string.IsNullOrEmpty(name))
 				name = "Null or Empty Named Node";
