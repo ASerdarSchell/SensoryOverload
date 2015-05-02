@@ -46,11 +46,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
      <Compile Include="Assets\Scripts\StoryManager.cs" />
+     <Compile Include="Assets\Scripts\StoryNodes\AudioNode.cs" />
+     <Compile Include="Assets\Scripts\StoryNodes\CameraNode.cs" />
      <Compile Include="Assets\Scripts\StoryNodes\ChoiceNode.cs" />
      <Compile Include="Assets\Scripts\StoryNodes\ChoiceOptionNode.cs" />
      <Compile Include="Assets\Scripts\StoryNodes\DialogueNode.cs" />
      <Compile Include="Assets\Scripts\StoryNodes\FunctionNode.cs" />
+     <Compile Include="Assets\Scripts\StoryNodes\PreviousChoiceNode.cs" />
      <Compile Include="Assets\Scripts\StoryNodes\StoryNode.cs" />
      <Compile Include="Assets\Scripts\UserInterface\UIChoicePanel.cs" />
      <Compile Include="Assets\Scripts\UserInterface\UIDialouePanel.cs" />

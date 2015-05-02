@@ -1,13 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="c:\SensoryOverload\unity\Assets\Scripts\StoryNodes\ChoiceNode.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LoadSceneOnClick.cs">
     <Files>
-      <File FileName="Assets\Scripts\StoryManager.cs" Line="26" Column="30" />
-      <File FileName="c:\SensoryOverload\unity\Assets\Scripts\StoryNodes\ChoiceNode.cs" Line="28" Column="29" />
-      <File FileName="c:\SensoryOverload\unity\Assets\Scripts\StoryNodes\DialogueNode.cs" Line="12" Column="60" />
-      <File FileName="Assets\Scripts\StoryNodes\ChoiceOptionNode.cs" Line="9" Column="21" />
-      <File FileName="Assets\Scripts\UserInterface\UIDialouePanel.cs" Line="8" Column="2" />
-      <File FileName="Assets\Scripts\UserInterface\UIChoicePanel.cs" Line="8" Column="27" />
+      <File FileName="Assets\Scripts\AudioManager.cs" Line="32" Column="2" />
+      <File FileName="Assets\Scripts\StoryManager.cs" Line="20" Column="4" />
+      <File FileName="c:\SensoryOverload\unity\Assets\Scripts\StoryNodes\ChoiceNode.cs" Line="12" Column="3" />
+      <File FileName="c:\SensoryOverload\unity\Assets\Scripts\StoryNodes\DialogueNode.cs" Line="27" Column="3" />
+      <File FileName="Assets\Scripts\StoryNodes\ChoiceOptionNode.cs" Line="11" Column="55" />
+      <File FileName="Assets\Scripts\UserInterface\UIDialouePanel.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UserInterface\UIChoicePanel.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StoryNodes\AudioNode.cs" Line="36" Column="2" />
+      <File FileName="Assets\Scripts\StoryNodes\StoryNode.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StoryNodes\CameraNode.cs" Line="13" Column="75" />
+      <File FileName="Assets\Scripts\StoryNodes\PreviousChoiceNode.cs" Line="12" Column="1" />
+      <File FileName="Assets\Scripts\LoadSceneOnClick.cs" Line="10" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

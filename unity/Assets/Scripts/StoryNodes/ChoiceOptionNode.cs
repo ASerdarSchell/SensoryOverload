@@ -8,6 +8,12 @@ public class ChoiceOptionNode : MonoBehaviour {
 
 	public void OnClick()
 	{
+		ChoiceNode parentNode = GetComponent<ChoiceNode> ();
+		if (parentNode != null) {
+			ChoiceOptionNode[] choices = GetComponents<ChoiceOptionNode>();
+
+		}
+
 		StoryManager.Instance.ShowNode (NextNode);
 	}
 }

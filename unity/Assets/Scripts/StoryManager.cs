@@ -32,5 +32,7 @@ public class StoryManager : MonoBehaviour {
 		CurrentNode = nextNode;
 		if (CurrentNode != null)
 			CurrentNode.Display ();
+		else
+			Application.LoadLevel (0);
 	}
 }
