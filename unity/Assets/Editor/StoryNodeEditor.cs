@@ -59,6 +59,18 @@ public class CameraNodeEditor : Editor {
 	
 	public override void OnInspectorGUI()
 	{
+		GUILayout.BeginHorizontal ();
+
+		if (GUILayout.Button ("Test Camera")) {
+			((CameraNode)target).UpdateCamera();
+		}
+
+		if (GUILayout.Button ("Reset Camera")) {
+			StoryManager.Instance.UpdateCamera();
+		}
+
+		GUILayout.EndHorizontal ();
+
 		DrawDefaultInspector ();
 		
 		StoryNode nextNode = StoryNodeHelper.DrawCreateHelper (((MonoBehaviour)target).gameObject);
@@ -132,6 +144,20 @@ public class PreviousChoiceNodeEditor : Editor {
 		
 		if (GUILayout.Button ("Add Choice Option")) {
 			((PreviousChoiceNode)target).gameObject.AddComponent<ChoiceOptionNode>();
+		}
+	}
+}
+
+[CustomEditor(typeof(StoryManager))]
+public class StoryManagerEditor : Editor {
+	
+	public override void OnInspectorGUI()
+	{
+		DrawDefaultInspector ();
+		
+		if (GUILayout.Button ("Set Camera Position")) {
+			((StoryManager)target).StartingCameraPosition = Camera.main.transform.position;
+			((StoryManager)target).StartingCameraRotation = Camera.main.transform.rotation;
 		}
 	}
 }

@@ -24,6 +24,8 @@ public class StoryManager : MonoBehaviour {
 	void Start () {
 		StartingNode.Display();
 		CurrentNode = StartingNode;
+
+		UpdateCamera ();
 	}
 	
 	public void ShowNode(StoryNode nextNode)
@@ -34,5 +36,14 @@ public class StoryManager : MonoBehaviour {
 			CurrentNode.Display ();
 		else
 			Application.LoadLevel (0);
+	}
+
+	public Vector3 StartingCameraPosition;
+	public Quaternion StartingCameraRotation;
+
+	public void UpdateCamera()
+	{
+		Camera.main.transform.position = StartingCameraPosition;
+		Camera.main.transform.rotation = StartingCameraRotation;
 	}
 }

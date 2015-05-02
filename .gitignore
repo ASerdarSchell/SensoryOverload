@@ -44,3 +44,9 @@ unity/Temp/**
 Network Trash Folder
 Temporary Items
 .apdisk
+unity/Assembly-CSharp-Editor-vs.csproj
+unity/Assembly-CSharp-Editor.csproj
+unity/Assembly-CSharp-vs.csproj
+unity/Assembly-CSharp.csproj
+unity/unity-csharp.sln
+unity/unity.sln
