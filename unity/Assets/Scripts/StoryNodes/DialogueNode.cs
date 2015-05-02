@@ -12,7 +12,7 @@ public class DialogueNode : StoryNode {
 		UIManager.Instance.DialogueUI.DialogueText.text = DialogueText;
 
 		UIManager.Instance.DialogueUI.gameObject.SetActive(true);
-		UIManager.Instance.DialogueUI.NextButton.onClick.RemoveAllListeners ();
+
 		UIManager.Instance.DialogueUI.NextButton.onClick.AddListener (OnClick);
 	}
 

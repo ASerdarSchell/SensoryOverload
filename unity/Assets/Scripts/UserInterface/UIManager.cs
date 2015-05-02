@@ -17,5 +17,4 @@ public class UIManager : MonoBehaviour {
 
 	public UIChoicePanel ChoiceUI = null;
 	public UIDialouePanel DialogueUI = null;
-	public UIInterstitialPanel InterstitialUI = null;
 }

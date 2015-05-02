@@ -22,7 +22,6 @@ public class AudioManager : MonoBehaviour {
 	{
 		GameObject loopObject = new GameObject ();
 		loopObject.transform.parent = gameObject.transform;
-		loopObject.AddComponent<AudioSource> ();
 		loopObject.audio.clip = clip;
 		loopObject.audio.loop = true;
 		loopObject.audio.volume = volume;
@@ -33,9 +32,6 @@ public class AudioManager : MonoBehaviour {
 
 	public void PlayOnce(AudioClip clip, float volume)
 	{
-		if (GetComponent<AudioSource> () == null)
-			gameObject.AddComponent<AudioSource> ();
-
 		audio.clip = clip;
 		audio.loop = false;
 		audio.volume = volume;
