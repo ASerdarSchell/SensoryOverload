@@ -9,9 +9,14 @@ public class CameraNode : StoryNode {
 	
 	override public void Display()
 	{
-		Camera.main.transform.position = CameraOrientation.transform.position;
-		Camera.main.transform.rotation = CameraOrientation.transform.rotation;
+		UpdateCamera ();
 		
 		StoryManager.Instance.ShowNode (NextNode);
+	}
+
+	public void UpdateCamera()
+	{
+		Camera.main.transform.position = CameraOrientation.transform.position;
+		Camera.main.transform.rotation = CameraOrientation.transform.rotation;
 	}
 }
