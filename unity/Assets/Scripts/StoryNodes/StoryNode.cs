@@ -11,4 +11,6 @@ public class StoryNode : MonoBehaviour {
 	{
 
 	}
+
+	public string Notes = "";
 }
