@@ -1,9 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\StoryNodes\CameraNode.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UserInterface\UIManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\AudioManager.cs" Line="40" Column="22" />
-      <File FileName="Assets\Scripts\StoryNodes\CameraNode.cs" Line="9" Column="2" />
+      <File FileName="Assets\Editor\StoryNodeEditor.cs" Line="21" Column="1" />
+      <File FileName="Assets\Scripts\AudioManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StoryNodes\CameraNode.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StoryNodes\DialogueNode.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StoryNodes\InterstitialNode.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StoryNodes\SetActiveNode.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UserInterface\UIManager.cs" Line="19" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

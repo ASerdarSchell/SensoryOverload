@@ -55,10 +55,13 @@
      <Compile Include="Assets\Scripts\StoryNodes\ChoiceOptionNode.cs" />
      <Compile Include="Assets\Scripts\StoryNodes\DialogueNode.cs" />
      <Compile Include="Assets\Scripts\StoryNodes\FunctionNode.cs" />
+     <Compile Include="Assets\Scripts\StoryNodes\InterstitialNode.cs" />
      <Compile Include="Assets\Scripts\StoryNodes\PreviousChoiceNode.cs" />
+     <Compile Include="Assets\Scripts\StoryNodes\SetActiveNode.cs" />
      <Compile Include="Assets\Scripts\StoryNodes\StoryNode.cs" />
      <Compile Include="Assets\Scripts\UserInterface\UIChoicePanel.cs" />
      <Compile Include="Assets\Scripts\UserInterface\UIDialouePanel.cs" />
+     <Compile Include="Assets\Scripts\UserInterface\UIInterstitialPanel.cs" />
      <Compile Include="Assets\Scripts\UserInterface\UIManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.4/UnityEngine.UI.dll</HintPath>
