@@ -69,7 +69,11 @@ public class FindEndNodesWindow : EditorWindow {
 		scroll = GUILayout.BeginScrollView (scroll);
 
 		foreach (StoryNode currentNode in EmptyNextNodes) {
-			if (GUILayout.Button(currentNode.name))
+			string name = currentNode.name;
+			if (string.IsNullOrEmpty(name))
+				name = "Null or Empty Named Node";
+
+			if (GUILayout.Button(name))
 				Selection.activeObject = currentNode;
 		}
 		GUILayout.EndScrollView ();
