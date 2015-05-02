@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ChoiceOptionNode : MonoBehaviour {
+public class ChoiceOptionNode : StoryNode {
 
 	public string ChoiceText = "";
 	public StoryNode NextNode = null;
