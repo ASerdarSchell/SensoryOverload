@@ -18,6 +18,7 @@ $RECYCLE.BIN/
 *.lnk
 
 unity/Library/**
+unity/Temp/**
 
 # =========================
 # Operating System Files
