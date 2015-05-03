@@ -4,8 +4,8 @@ using UnityEditor;
 
 public class StoryNodeHelper
 {
-	static string[] options = new string[] { "Create Node", "AudioNode", "CameraNode", "ChoiceNode", "DialogueNode", "PreviousChoiceNode", "InterstitialNode", "SetActiveNode" };
-	static System.Type[] optionType = new System.Type[] { typeof(string), typeof(AudioNode), typeof(CameraNode), typeof(ChoiceNode), typeof(DialogueNode), typeof(PreviousChoiceNode), typeof(InterstitialNode), typeof(SetActiveNode) };
+	static string[] options = new string[] { "Create Node", "AudioNode", "CameraNode", "ChoiceNode", "DialogueNode", "PreviousChoiceNode", "InterstitialNode", "SetActiveNode", "EndNode", "CameraLerpNode" };
+	static System.Type[] optionType = new System.Type[] { typeof(string), typeof(AudioNode), typeof(CameraNode), typeof(ChoiceNode), typeof(DialogueNode), typeof(PreviousChoiceNode), typeof(InterstitialNode), typeof(SetActiveNode), typeof(EndNode), typeof(CameraLerpNode) };
 
 	public static StoryNode DrawCreateHelper(GameObject parent)
 	{
@@ -43,6 +43,8 @@ public class DialogueNodeEditor : Editor {
 	public override void OnInspectorGUI()
 	{
 		DrawDefaultInspector ();
+
+		StoryNodeHelper.DrawTextBox(serializedObject, "DialogueText");
 
 		StoryNode nextNode = StoryNodeHelper.DrawCreateHelper (((MonoBehaviour)target).gameObject);
 		if (nextNode != null) {
@@ -161,6 +163,20 @@ public class PreviousChoiceNodeEditor : Editor {
 		
 		if (GUILayout.Button ("Add Choice Option")) {
 			((PreviousChoiceNode)target).gameObject.AddComponent<ChoiceOptionNode>();
+		}
+	}
+}
+
+[CustomEditor(typeof(CameraLerpNode))]
+public class CameraLerpNodeEditor : Editor {
+	
+	public override void OnInspectorGUI()
+	{
+		DrawDefaultInspector ();
+		
+		StoryNode nextNode = StoryNodeHelper.DrawCreateHelper (((MonoBehaviour)target).gameObject);
+		if (nextNode != null) {
+			((CameraLerpNode)target).NextNode = nextNode;
 		}
 	}
 }

@@ -63,6 +63,11 @@ public class FindEndNodesWindow : EditorWindow {
 			{
 				EmptyNextNodes.Add(currentNode);
 			}
+
+			if (currentNode as CameraLerpNode && ((CameraLerpNode)currentNode).NextNode == null)
+			{
+				EmptyNextNodes.Add(currentNode);
+			}
 		}
 
 	}

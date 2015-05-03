@@ -14,7 +14,7 @@ public class CameraNode : StoryNode {
 		StoryManager.Instance.ShowNode (NextNode);
 	}
 
-	public void UpdateCamera()
+	public virtual void UpdateCamera()
 	{
 		Camera.main.transform.position = CameraOrientation.transform.position;
 		Camera.main.transform.rotation = CameraOrientation.transform.rotation;

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class UIManager : MonoBehaviour {
@@ -18,4 +19,5 @@ public class UIManager : MonoBehaviour {
 	public UIChoicePanel ChoiceUI = null;
 	public UIDialouePanel DialogueUI = null;
 	public UIInterstitialPanel InterstitialUI = null;
+	public GameObject EndPanelUI = null;
 }
