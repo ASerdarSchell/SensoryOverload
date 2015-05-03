@@ -27,6 +27,7 @@ public class AudioManager : MonoBehaviour {
 		loopObject.audio.loop = true;
 		loopObject.audio.volume = volume;
 		loopObject.audio.Play ();
+		loopObject.name = name;
 
 		_namesToAudioSources [name] = loopObject.audio;
 	}
@@ -44,11 +45,20 @@ public class AudioManager : MonoBehaviour {
 
 	public void SetPlayingVolume(string name, float volume)
 	{
+		if (!_namesToAudioSources.ContainsKey (name)) {
+			Debug.LogWarning ("Can't find audio with name: " + name);
+			return;
+		}
 		_namesToAudioSources [name].volume = volume;
 	}
 
 	public void StopLoop(string name)
 	{
+		if (!_namesToAudioSources.ContainsKey (name)) {
+			Debug.LogWarning ("Can't find audio with name: " + name);
+			return;
+		}
+
 		AudioSource source = _namesToAudioSources[name];
 		source.Stop ();
 		_namesToAudioSources.Remove (name);
