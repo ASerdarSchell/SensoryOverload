@@ -4,8 +4,8 @@ using UnityEditor;
 
 public class StoryNodeHelper
 {
-	static string[] options = new string[] { "Create Node", "AudioNode", "CameraNode", "ChoiceNode", "DialogueNode", "PreviousChoiceNode", "InterstitialNode", "SetActiveNode", "EndNode", "CameraLerpNode" };
-	static System.Type[] optionType = new System.Type[] { typeof(string), typeof(AudioNode), typeof(CameraNode), typeof(ChoiceNode), typeof(DialogueNode), typeof(PreviousChoiceNode), typeof(InterstitialNode), typeof(SetActiveNode), typeof(EndNode), typeof(CameraLerpNode) };
+	public static string[] options = new string[] { "Create Node", "AudioNode", "CameraNode", "ChoiceNode", "DialogueNode", "PreviousChoiceNode", "InterstitialNode", "SetActiveNode", "EndNode", "CameraLerpNode" };
+	public static System.Type[] optionType = new System.Type[] { typeof(string), typeof(AudioNode), typeof(CameraNode), typeof(ChoiceNode), typeof(DialogueNode), typeof(PreviousChoiceNode), typeof(InterstitialNode), typeof(SetActiveNode), typeof(EndNode), typeof(CameraLerpNode) };
 
 	public static StoryNode DrawCreateHelper(GameObject parent)
 	{
