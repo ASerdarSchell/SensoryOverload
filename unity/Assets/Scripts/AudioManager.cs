@@ -73,6 +73,11 @@ public class AudioManager : MonoBehaviour {
 		foreach (string soundName in soundNames) {
 			StopLoop(soundName);
 		}
+
+		if (GetComponent<AudioSource> () == null)
+			return;
+
+		audio.Stop ();
 	}
 
 }
