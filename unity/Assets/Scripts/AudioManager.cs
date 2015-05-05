@@ -27,6 +27,10 @@ public class AudioManager : MonoBehaviour {
 		loopObject.audio.loop = true;
 		loopObject.audio.volume = volume;
 		loopObject.audio.Play ();
+
+		if (string.IsNullOrEmpty (name))
+			name = clip.name;
+
 		loopObject.name = name;
 
 		_namesToAudioSources [name] = loopObject.audio;
