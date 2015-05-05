@@ -9,7 +9,8 @@ public class AudioNode : StoryNode {
 		PlayLoop,
 		PlayOnce,
 		SetVolume,
-		Stop
+		Stop,
+		StopAll
 	}
 
 	public string AudioName = "";
@@ -30,6 +31,8 @@ public class AudioNode : StoryNode {
 			AudioManager.Instance.SetPlayingVolume (AudioName, Volume);
 		else if (Function == AudioFunction.Stop)
 			AudioManager.Instance.StopLoop (AudioName);
+		else if (Function == AudioFunction.StopAll)
+			AudioManager.Instance.StopAll ();
 
 		StoryManager.Instance.ShowNode (NextNode);
 	}

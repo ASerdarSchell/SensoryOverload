@@ -66,4 +66,13 @@ public class AudioManager : MonoBehaviour {
 		GameObject.Destroy (source.gameObject);
 	}
 
+	public void StopAll()
+	{
+		List<string> soundNames = new List<string>(_namesToAudioSources.Keys);
+
+		foreach (string soundName in soundNames) {
+			StopLoop(soundName);
+		}
+	}
+
 }
