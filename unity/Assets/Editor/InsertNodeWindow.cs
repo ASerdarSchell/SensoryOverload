@@ -78,7 +78,7 @@ public class InsertNodeWindow : EditorWindow {
 
 	}
 
-	StoryNode getNextNode(StoryNode currentNode)
+	public static StoryNode getNextNode(StoryNode currentNode)
 	{
 		if (currentNode as AudioNode)
 		{
@@ -123,7 +123,7 @@ public class InsertNodeWindow : EditorWindow {
 		return null;
 	}
 
-	void setNextNode(StoryNode currentNode, StoryNode nextNode)
+	public static void setNextNode(StoryNode currentNode, StoryNode nextNode)
 	{
 		if (currentNode as AudioNode)
 		{
